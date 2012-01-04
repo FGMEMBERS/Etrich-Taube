@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>intnoze</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>inttail</object-name>
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Etrich-Taube/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -2.296 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.018 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/Etrich-Taube/Models/Interior/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> -2.496 </x-m>
+      <y-m> -0.232 </y-m>
+      <z-m>  0.664 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- TACH -->
+  <model>
+    <path>Aircraft/Etrich-Taube/Models/Interior/Instruments/tach/tach.xml</path>
+    <offsets>
+      <x-m> -2.496 </x-m>
+      <y-m>  0.157 </y-m>
+      <z-m>  0.708 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- CLOCK -->
+  <model>
+    <path>Aircraft/Etrich-Taube/Models/Interior/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m> -2.496 </x-m>
+      <y-m> -0.164 </y-m>
+      <z-m>  0.569 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- BOUSSOLE -->
+  <model>
+    <path>Aircraft/Etrich-Taube/Models/Interior/Instruments/boussole/boussole.xml</path>
+    <offsets>
+      <x-m> -2.466 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.630 </z-m>
+      <heading-deg> 0 </heading-deg>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -50 </pitch-deg>
+    </offsets>
+  </model>
+  
+</PropertyList>
+

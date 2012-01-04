@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Etrich Taube
+                  : 2011 Emmanuel BARANGER
+
+     Source       : http://en.wikipedia.org/wiki/Etrich_Taube
+                 
+     Wingspan     : 14.3 m    (  45 ft 83 in )
+     Length       :  9.9 m    (  33 ft 50 in )
+     Height       :  3.2 m    (  10 ft 50 in )
+     Empty weight :  650 kg   ( 950 lb      )
+     Engine       : 1x 4-cylinder Argus or 6-Cylinder Mercedes Typ E4F (100 hp / 99 hp)
+     Max speed    :  100 km/h (  54.5 kt      )
+-->
+
+<airplane mass="650" >
+
+  <approach speed="20" aoa="7" fuel="0.3">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.65"/>
+  </approach>
+  
+  <cruise speed="85" alt="5000" fuel="0.7" >
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1" />
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.65" />
+  </cruise>
+
+  <cockpit x="2.163" y="0.00" z="0.832"/>
+
+  <fuselage ax="5.369" ay="0" az="0.091" bx="-2.762" by="0" bz="0.112" width="0.820" taper="0.4" midpoint="0.3"/>
+
+  <!-- Wing up -->
+  <wing x="2.817" y="0.433" z="0.399" 
+        chord="3.231" 
+        length="6.566" 
+        taper="0.8"
+        dihedral="5" 
+        camber="0.01">
+        <stall aoa="24" width="1" peak="1.5"/>
+        <flap0 start="0.6" end="1" lift="1.2" drag="1.1"/>
+      
+        <control-input axis="/controls/flight/aileron" control="FLAP0" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true"/>
+     
+        <control-output control="FLAP0" prop="/surface-positions/aileron-pos-norm"/>
+        <control-output control="FLAP0" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP0" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+  </wing>
+
+  <hstab x="-4.410" y="0" z="0.263" 
+         chord="2.620" 
+         length="1.539" 
+         taper="1"> 
+         <stall aoa="22" width="1" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.55" drag="1.2"/>
+
+         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </hstab>
+
+  <vstab x="-3.206" y="0" z="-0.320" 
+         chord="0.845" 
+         length="1.175" 
+         taper="1">
+         <stall aoa="20" width="1" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.6" drag="1.2"/>
+
+         <control-input axis="/controls/flight/rudder" square="true" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+  </vstab>
+
+  <!-- Engines      : Argus As I
+
+       Informations : http://en.wikipedia.org/wiki/Argus_As_I
+
+       Type         : 9Four-cylinder, liquid-cooled piston engine
+       Power        : 100 hp at 1300 rpm (Maximum power)
+       Masse        : 110 kg ( 242.51 lb  ) (valeur definie par comparaison :( )
+  -->
+  <propeller x="4.798" y="0" z="0.271"  
+             radius="1.0795"
+             mass="242.51"       
+             moment="4"
+             cruise-power="90"
+             cruise-alt="5000" 
+             cruise-speed="85"
+             cruise-rpm="1100"
+             takeoff-power="100"
+             takeoff-rpm="1300">
+             <actionpt x="5.432" y="0" z="0.128"/>
+             <piston-engine eng-rpm="1300" 
+                            alt="5000" 
+                            eng-power="100">
+                            <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
+                            <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
+                            <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
+                            <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture"/>
+             </piston-engine> 
+  </propeller>
+
+  <!-- Left wheel -->
+  <gear x="3.603" y="1.017" z="-1.744" 
+        sfric="1.1"
+        dfric="0.6"
+        compression="0.02">
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+  <!-- Right wheel -->
+  <gear x="3.603" y="-1.017" z="-1.744" 
+        sfric="1.1"
+        dfric="0.6"
+        compression="0.02">
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+  <!-- Tail wheel -->
+  <gear x="-2.657" y="0" z="-1.035" 
+        sfric="1.1"
+        dfric="0.6"
+        compression="0.02">
+  </gear>
+
+  <!-- Fuel: Forward 142 lbs -->
+  <tank x="2.824" y="0" z="0.562" capacity="160"/>
+  
+</airplane>
+
