@@ -9,7 +9,7 @@ name "aileronD1"
 loc -1.99225 0.936507 -5.517782
 data 9
 aileronD1
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 88
 -0.687685 -0.067064 -0.644961
@@ -506,7 +506,7 @@ name "aileronD2"
 loc -1.66971 1.001976 -5.732181
 data 9
 aileronD2
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 68
 -0.662834 -0.091465 -0.626409
@@ -871,7 +871,7 @@ name "aileronD3"
 loc -1.174848 1.125897 -6.178669
 data 9
 aileronD3
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 77
 -0.827927 -0.170526 -0.365507
@@ -1386,7 +1386,7 @@ name "aileronDtrs1"
 loc -1.784928 0.945838 -5.349245
 data 12
 aileronDtrs1
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture-t.png"
+texture "texture-t.png"
 texrep 1 1
 numvert 69
 0.608826 0.049779 0.642137
@@ -1846,7 +1846,7 @@ name "aileronDtrs2"
 loc -1.524734 1.014148 -5.621145
 data 12
 aileronDtrs2
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture-t.png"
+texture "texture-t.png"
 texrep 1 1
 numvert 55
 -0.47879 -0.058438 -0.925071
@@ -2175,7 +2175,7 @@ name "aileronDtrs3"
 loc -1.06636 1.138805 -6.141658
 data 12
 aileronDtrs3
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture-t.png"
+texture "texture-t.png"
 texrep 1 1
 numvert 45
 -0.629959 -0.149553 -0.577443
@@ -2552,7 +2552,7 @@ name "aileronG1"
 loc -1.99225 0.936507 5.517782
 data 9
 aileronG1
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 88
 -0.687686 -0.067064 0.644962
@@ -3049,7 +3049,7 @@ name "aileronG2"
 loc -1.66971 1.001976 5.732181
 data 9
 aileronG2
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 68
 -0.662835 -0.091465 0.626409
@@ -3414,7 +3414,7 @@ name "aileronG3"
 loc -1.174848 1.125897 6.178668
 data 9
 aileronG3
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 77
 -0.827927 -0.170526 0.365508
@@ -3929,7 +3929,7 @@ name "aileronGtrs1"
 loc -1.785865 0.945838 5.350098
 data 12
 aileronGtrs1
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture-t.png"
+texture "texture-t.png"
 texrep 1 1
 numvert 69
 0.609764 0.049779 -0.642989
@@ -4389,7 +4389,7 @@ name "aileronGtrs2"
 loc -1.526286 1.014148 5.621009
 data 12
 aileronGtrs2
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture-t.png"
+texture "texture-t.png"
 texrep 1 1
 numvert 55
 -0.477237 -0.058438 0.925207
@@ -4718,7 +4718,7 @@ name "aileronGtrs3"
 loc -1.06636 1.138805 6.141658
 data 12
 aileronGtrs3
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture-t.png"
+texture "texture-t.png"
 texrep 1 1
 numvert 45
 -0.629959 -0.149553 0.577444
@@ -5095,7 +5095,7 @@ name "ailesbois"
 loc -3.406637 0.538334 0.238445
 data 9
 ailesbois
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 2096
 1.746588 -0.510319 0.177145
@@ -19395,7 +19395,7 @@ name "ailestrs"
 loc -3.306932 0.556596 0.000032
 data 8
 ailestrs
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture-t.png"
+texture "texture-t.png"
 texrep 1 1
 numvert 1012
 0.14563 0.269605 5.871458
@@ -27903,7 +27903,7 @@ name "axes.001"
 loc -3.569853 -1.147148 0.006526
 data 8
 axes.001
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 48
 0.016145 -0.234539 0.809312
@@ -29805,7 +29805,7 @@ name "came1"
 loc -4.513045 0.687953 -0.051121
 data 5
 came1
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 144
 0.012849 -0.004537 0.050435
@@ -31245,7 +31245,7 @@ name "came2"
 loc -4.708045 0.686204 -0.051255
 data 5
 came2
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 144
 0.012849 0.007799 0.050035
@@ -32685,7 +32685,7 @@ name "came3"
 loc -4.903044 0.688076 -0.051095
 data 5
 came3
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 144
 0.012849 -0.005417 0.050348
@@ -34125,7 +34125,7 @@ name "came4"
 loc -5.098044 0.686204 -0.051255
 data 5
 came4
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 144
 0.012849 0.007799 0.050035
@@ -35565,7 +35565,7 @@ name "capot"
 loc -4.256021 0.24049 0
 data 5
 capot
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 184
 0.383461 0.327295 0.138636
@@ -36751,7 +36751,7 @@ name "directiontrs"
 loc 3.118601 0.272913 -0
 data 12
 directiontrs
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture-t.png"
+texture "texture-t.png"
 texrep 1 1
 numvert 36
 -0.09205 0.584524 0
@@ -37109,7 +37109,7 @@ name "essieu"
 loc -3.603208 -1.303632 0
 data 6
 essieu
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 64
 0 0.029308 -1.045444
@@ -37407,7 +37407,7 @@ name "helice1"
 loc -5.449375 0.127609 0.008302
 data 7
 helice1
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 180
 -0.040682 0.565176 0.067281
@@ -38829,7 +38829,7 @@ name "helice2"
 loc -5.433095 0.127609 0.002591
 data 7
 helice2
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 546
 0.015361 0.55482 0.012751
@@ -43353,7 +43353,7 @@ name "huile"
 loc -3.549263 1.345024 0
 data 5
 huile
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 354
 0.057878 0 -0.083659
@@ -46341,7 +46341,7 @@ name "manche"
 loc -2.433623 0.071799 0
 data 6
 manche
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 209
 -0.016781 0.419919 -0.003323
@@ -47704,7 +47704,7 @@ name "moteur"
 loc -4.809737 0.54758 -0.050107
 data 6
 moteur
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 5685
 0.282261 -0.136196 -0.022439
@@ -89369,7 +89369,7 @@ name "pedals"
 loc -2.618599 -0.295659 0.000125
 data 6
 pedals
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 81
 0 0.001715 -0.015607
@@ -89958,7 +89958,7 @@ name "piedmanche"
 loc -2.433668 -0.291699 0.033543
 data 10
 piedmanche
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 385
 0.043674 -0.030432 -0.006013
@@ -92967,7 +92967,7 @@ name "pneuD"
 loc -3.603262 -1.303634 -1.01664
 data 5
 pneuD
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 528
 0.439979 0 0
@@ -96865,7 +96865,7 @@ name "pneuG"
 loc -3.603262 -1.303634 1.016641
 data 5
 pneuG
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 528
 0.439979 0 -0
@@ -100763,7 +100763,7 @@ name "profondeur1"
 loc 3.3386 0.272931 -0
 data 11
 profondeur1
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 84
 0.315374 0.009809 0.011345
@@ -101179,7 +101179,7 @@ name "profondeur2"
 loc 3.917498 0.272933 -0
 data 11
 profondeur2
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 72
 0.263524 0.007832 0.011345
@@ -101513,7 +101513,7 @@ name "profondeur3"
 loc 4.421952 0.272932 -0
 data 11
 profondeur3
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 72
 0.24093 0.006028 0.011345
@@ -101847,7 +101847,7 @@ name "profondeur4"
 loc 5.128675 0.27293 -0
 data 11
 profondeur4
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 72
 0.582581 0.00205 -0.436168
@@ -102244,7 +102244,7 @@ name "profondeurtrs1"
 loc 3.583353 0.272877 0.000001
 data 14
 profondeurtrs1
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture-t.png"
+texture "texture-t.png"
 texrep 1 1
 numvert 64
 -0.492517 -0.001102 -0.955278
@@ -102662,7 +102662,7 @@ name "profondeurtrs2"
 loc 3.916688 0.272955 0.000001
 data 14
 profondeurtrs2
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture-t.png"
+texture "texture-t.png"
 texrep 1 1
 numvert 112
 0.262976 -0.000619 -1.22899
@@ -103176,7 +103176,7 @@ name "profondeurtrs3"
 loc 4.421273 0.272971 0.000001
 data 14
 profondeurtrs3
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture-t.png"
+texture "texture-t.png"
 texrep 1 1
 numvert 112
 0.241609 -0.000387 -1.350462
@@ -103690,7 +103690,7 @@ name "profondeurtrs4"
 loc 4.947334 0.272975 0.000001
 data 14
 profondeurtrs4
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture-t.png"
+texture "texture-t.png"
 texrep 1 1
 numvert 81
 -0.284452 -0.000391 -1.350462
@@ -104165,7 +104165,7 @@ name "propblur"
 loc -5.438755 0.127611 0.002599
 data 8
 propblur
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/prop.png"
+texture "prop.png"
 texrep 1 1
 crease 30.000001
 numvert 32
@@ -104292,7 +104292,7 @@ name "propdisc"
 loc -5.434499 0.132229 0.002061
 data 8
 propdisc
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/prop.png"
+texture "prop.png"
 texrep 1 1
 crease 30.000001
 numvert 678
@@ -107336,7 +107336,7 @@ name "radiateur"
 loc -3.508936 -0.082767 0
 data 9
 radiateur
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 520
 -0.271692 -0.19578 0.257169
@@ -109910,7 +109910,7 @@ name "reservoir"
 loc -2.918555 0.655111 0
 data 9
 reservoir
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 229
 0 -0.042805 -0.017525
@@ -111699,7 +111699,7 @@ name "roueD"
 loc -3.603213 -1.303633 -1.015652
 data 5
 roueD
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 1586
 0.292955 0.038573 -0.000989
@@ -120175,7 +120175,7 @@ name "roueG"
 loc -3.603213 -1.303633 1.015651
 data 5
 roueG
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 1586
 0.292955 0.038573 0.000989
@@ -128651,7 +128651,7 @@ name "structure"
 loc -1.361325 -0.126385 0.000001
 data 9
 structure
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 814
 -1.120578 0.436702 0.332361
@@ -133687,7 +133687,7 @@ name "tailtrs"
 loc 0.272827 0.32758 0.003375
 data 7
 tailtrs
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture-t.png"
+texture "texture-t.png"
 texrep 1 1
 numvert 290
 2.512781 -0.63919 0.015771
@@ -135945,7 +135945,7 @@ name "tourarriere"
 loc -2.176009 0.601379 -0
 data 11
 tourarriere
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 768
 -0.308765 0.089825 0
@@ -142099,7 +142099,7 @@ name "touravant"
 loc -3.590479 0.55851 0.000001
 data 9
 touravant
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 896
 -0.290531 0.036036 -0
@@ -149277,7 +149277,7 @@ name "tuyaux"
 loc -2.527264 0.664198 0.232486
 data 6
 tuyaux
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 640
 -0.00838 0 -0.002476
@@ -153959,7 +153959,7 @@ name "volant"
 loc -2.409596 0.475014 0.000241
 data 6
 volant
-texture "../../../../../blender-2.61-linux-glibc27-x86_64/texture.png"
+texture "texture.png"
 texrep 1 1
 numvert 962
 -0.040808 0.017031 -0.000241
