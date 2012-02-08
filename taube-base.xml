@@ -68,11 +68,9 @@
   <nasal>
     <taube>
       <file>Aircraft/Etrich-Taube/Nasal/taube.nas</file>
+      <file>Aircraft/Etrich-Taube/Nasal/rpm.nas</file>
       <file>Aircraft/Etrich-Taube/Nasal/liveries.nas</file>
     </taube>
-    <guns>
-      <file>Aircraft/Etrich-Taube/Nasal/weapons.nas</file>
-    </guns>
   </nasal>
 
 </PropertyList>

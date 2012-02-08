@@ -234,7 +234,7 @@
     <offsets>
       <x-m>  0.113 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -1.420 </z-m>
+      <z-m> -1.410 </z-m>
     </offsets>
   </model>
 
@@ -355,6 +355,90 @@
       <x-m> -5.432 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.128 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>came1</object-name>
+    <property>engines/engine[0]/cames</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep>  0.0 </dep></entry>
+      <entry><ind>  0 </ind><dep>  7.5 </dep></entry>
+      <entry><ind>  1 </ind><dep> 15.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -4.513 </x-m>
+      <y-m>  0.052 </y-m>
+      <z-m>  0.688 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>came2</object-name>
+    <property>engines/engine[0]/cames</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  0 </ind><dep>  -7.5 </dep></entry>
+      <entry><ind>  1 </ind><dep> -15.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -4.708 </x-m>
+      <y-m>  0.052 </y-m>
+      <z-m>  0.688 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>came3</object-name>
+    <property>engines/engine[0]/cames</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep>  0.0 </dep></entry>
+      <entry><ind>  0 </ind><dep>  7.5 </dep></entry>
+      <entry><ind>  1 </ind><dep> 15.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -4.903 </x-m>
+      <y-m>  0.052 </y-m>
+      <z-m>  0.688 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>came4</object-name>
+    <property>engines/engine[0]/cames</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  0 </ind><dep>  -7.5 </dep></entry>
+      <entry><ind>  1 </ind><dep> -15.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -5.098 </x-m>
+      <y-m>  0.052 </y-m>
+      <z-m>  0.688 </z-m>
     </center>
     <axis>
       <x> 1 </x>
@@ -950,24 +1034,7 @@
       <z>  0 </z>
     </axis>
   </animation>
-<!--
-  <animation>
-    <type>rotate</type>
-    <object-name>came1</object-name>
-    <property>engines/engine[0]/rpm</property>
-    <factor> 15 </factor>
-    <center>
-      <x-m> -4.498 </x-m>
-      <y-m>  0.044 </y-m>
-      <z-m>  0.689 </z-m>
-    </center>
-    <axis>
-      <x>  0 </x>
-      <y> -1 </y>
-      <z>  0 </z>
-    </axis>
-  </animation>
--->
+
   <!-- Animation du manche -->
   <animation>
     <type>rotate</type>
