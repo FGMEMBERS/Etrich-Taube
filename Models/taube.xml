@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -12,10 +12,10 @@
 
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
-      
+
       var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
       var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -61,11 +61,6 @@
     <object-name>huile</object-name>
     <object-name>reservoir</object-name>
     <object-name>tuyaux</object-name>
-
-    <object-name>manche</object-name>
-    <object-name>piedmanche</object-name>
-    <object-name>volant</object-name>
-    <object-name>pedals</object-name>
 
     <!-- Objets transparents -->
     <object-name>ailestrs</object-name>
@@ -132,35 +127,11 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <animation>
@@ -182,35 +153,11 @@
     <property-base>sim/model/livery-t</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture-t.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
@@ -228,13 +175,19 @@
     <object-name>tuyaux</object-name>
   </effect>
 
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+  </effect>
+  
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/Etrich-Taube/Models/shadow.xml</path>
     <offsets>
       <x-m>  0.113 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -1.410 </z-m>
+      <z-m> -1.400 </z-m>
     </offsets>
   </model>
 
@@ -250,8 +203,6 @@
       <x-m> -5.141 </x-m>
       <y-m>  0.293 </y-m>
       <z-m>  0.627 </z-m>
-      <heading-deg> 0 </heading-deg>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
     </offsets>
   </model>
@@ -262,8 +213,6 @@
       <x-m> -4.861 </x-m>
       <y-m>  0.293 </y-m>
       <z-m>  0.627 </z-m>
-      <heading-deg> 0 </heading-deg>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
     </offsets>
   </model>
@@ -274,8 +223,6 @@
       <x-m> -4.751 </x-m>
       <y-m>  0.293 </y-m>
       <z-m>  0.627 </z-m>
-      <heading-deg> 0 </heading-deg>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
     </offsets>
   </model>
@@ -286,8 +233,6 @@
       <x-m> -4.471 </x-m>
       <y-m>  0.293 </y-m>
       <z-m>  0.627 </z-m>
-      <heading-deg> 0 </heading-deg>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
     </offsets>
   </model>
@@ -349,6 +294,12 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceComplete</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>engines/engine[0]/rpm</property>
     <factor> 1 </factor>
     <center>
@@ -1035,58 +986,4 @@
     </axis>
   </animation>
 
-  <!-- Animation du manche -->
-  <animation>
-    <type>rotate</type>
-    <object-name>volant</object-name>
-    <object-name>manche</object-name>
-    <property>surface-positions/elevator-pos-norm</property>
-    <factor> -10 </factor>
-    <center>
-      <x-m> -2.4337 </x-m>
-      <y-m>  0.0000 </y-m>
-      <z-m> -0.2915 </z-m>
-    </center>
-    <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>volant</object-name>
-    <property>surface-positions/aileron-pos-norm</property>
-    <factor> -45 </factor>
-    <center>
-      <x-m> -2.4335 </x-m>
-      <y-m>  0.0000 </y-m>
-      <z-m>  0.4750 </z-m>
-    </center>
-    <axis>
-      <x> 1 </x>
-      <y> 0 </y>
-      <z> 0 </z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>pedals</object-name>
-    <property>surface-positions/rudder-pos-norm</property>
-    <factor> 20 </factor>
-    <center>
-      <x-m> -2.6186 </x-m>
-      <y-m>  0.0000 </y-m>
-      <z-m> -0.2872 </z-m>
-    </center>
-    <axis>
-      <x> 0 </x>
-      <y> 0 </y>
-      <z> 1 </z>
-    </axis>
-  </animation>
-
 </PropertyList>
-

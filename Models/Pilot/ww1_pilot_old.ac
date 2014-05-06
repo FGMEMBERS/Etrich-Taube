@@ -1,6 +1,6 @@
 AC3Db
-MATERIAL "DefaultWhite" rgb 0.8 0.8 0.8 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 48 trans 0
-MATERIAL "transparent" rgb 0.437673 0.452499 0.476785 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 48 trans 0.85
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+MATERIAL "transparent" rgb 1 1 1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0.8
 OBJECT world
 kids 16
 OBJECT poly
@@ -9,7 +9,8 @@ loc 0 0 -0
 data 10
 avantbrasD
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 35
 -0.051739 0.417362 -0.113013
 -0.05609 0.426862 -0.122689
@@ -260,7 +261,8 @@ loc 0 0 -0
 data 10
 avantbrasG
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 35
 -0.051739 0.417362 0.146194
 -0.058385 0.419762 0.157659
@@ -511,7 +513,8 @@ loc 0 0 -0
 data 5
 brasD
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 22
 0.392286 0.465362 -0.14111
 0.276864 0.393962 -0.16917
@@ -693,7 +696,8 @@ loc 0 0 -0
 data 5
 brasG
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 22
 0.392286 0.465362 0.174291
 0.354407 0.491362 0.210068
@@ -875,7 +879,8 @@ loc 0 0 -0
 data 5
 corps
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 270
 0.193259 0.544062 0.028398
 0.198659 0.551262 0.009138
@@ -2502,7 +2507,8 @@ loc 0 0 -0
 data 7
 cuisseD
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 30
 -0.050058 0.31729 -0.095091
 -0.178302 0.315295 -0.091669
@@ -2710,7 +2716,8 @@ loc 0 0 -0
 data 7
 cuisseG
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 30
 -0.111839 0.304158 0.153103
 -0.134344 0.231399 0.173903
@@ -2911,7 +2918,8 @@ loc 0 0 -0
 data 6
 jambeD
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 112
 -0.160424 0.283427 -0.05004
 -0.131406 0.273466 -0.065459
@@ -3744,7 +3752,8 @@ loc 0 0 -0
 data 6
 jambeG
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 112
 -0.148875 0.270333 0.077414
 -0.15151 0.288237 0.081725
@@ -4577,7 +4586,8 @@ loc 0 0 -0
 data 8
 lunettes
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 159
 0.17466 0.751198 -0.038857
 0.152005 0.759797 -0.047497
@@ -5662,7 +5672,8 @@ loc 0 0 -0
 data 10
 lunettesTr
 texture "transp.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 30
 0.129313 0.760632 -0.020587
 0.126937 0.783453 -0.020587
@@ -5814,7 +5825,8 @@ loc 0 0 -0
 data 5
 mainD
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 140
 -0.090023 0.385076 -0.106404
 -0.08761 0.414326 -0.085531
@@ -6944,7 +6956,8 @@ loc 0 0 -0
 data 5
 mainG
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 140
 -0.090023 0.385076 0.139586
 -0.099299 0.421456 0.124016
@@ -8074,7 +8087,8 @@ loc 0 0 -0
 data 5
 piedD
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 51
 -0.637296 0.141168 -0.126645
 -0.622515 0.119188 -0.124425
@@ -8416,7 +8430,8 @@ loc 0 0 -0
 data 5
 piedG
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 51
 -0.64352 0.137098 0.148343
 -0.636548 0.111127 0.16223
@@ -8758,7 +8773,8 @@ loc 0 0 -0
 data 4
 tete
 texture "ww1_pilot_old.png"
-texrep 1 1
+texrep 1.000000 1.000000
+crease 30.000001
 numvert 703
 0.315755 0.845013 -0.04208
 0.315589 0.865518 -0.03533

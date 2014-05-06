@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
-  <sim include="Nasal/views.xml">
+  <sim include="Systems/views.xml">
 
+    <description>Etrich Taube (YASim)</description>
     <author>Emmanuel BARANGER (3D/FDM)</author>
-    <aircraft-version>0.1</aircraft-version>
+    <aircraft-version>0.2</aircraft-version>
     <status>Alpha</status>
 
     <fuel-fraction>1.0</fuel-fraction>
@@ -14,10 +15,6 @@
       <splash-texture>Aircraft/Etrich-Taube/taube-splash.png</splash-texture>
     </startup>
 
-    <sound>
-      <path archive="y">Aircraft/Etrich-Taube/Sounds/taube-sound.xml</path>
-    </sound>
-
     <model>
       <path archive="y">Aircraft/Etrich-Taube/Models/taube.xml</path>
       <livery>
@@ -25,6 +22,10 @@
       </livery>
     </model>
 
+    <sound>
+      <path archive="y">Aircraft/Etrich-Taube/Sounds/taube-sound.xml</path>
+    </sound>
+    
     <multiplay>
       <chat_display>1</chat_display>
       <generic> 
@@ -38,16 +39,25 @@
         <int type="int" n="7">  0 </int>                                      <!-- 7 color -->
         <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
         <int n="9" alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
-        <int n="10" alias="/controls/electric/key-pos">  0 </int>             <!-- 10 key position -->
-        <float n="2" alias="/position/gear-agl-m">  0 </float>                <!-- 11 altitude for MP shadow -->
-        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
-        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>  
+        <float n="0" alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1" alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m"> 0 </float>                 <!-- altitude for MP shadow -->
+        <float n="3" alias="/position/altitude-ft"> 0 </float>                <!-- altitude for Smoke/Trail -->
+        <float n="4" alias="/engines/engine[0]/rpm"/>
+        <float n="5" alias="/engines/engine[0]/cranking"/>
+        <float n="6" alias="/gear/gear[0]/wow/"/>
+        <float n="7" alias="/gear/gear[1]/wow/"/>
+        <float n="8" alias="/gear/gear[2]/wow/"/>
+        <float n="9" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="10" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="11" alias="/gear/gear[2]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
       </generic>
     </multiplay>
-
-    <help>
-      <title>Etrich Taube</title>
-    </help>
+    
+    <help include="Systems/help.xml"/>
 
     <menubar include="Dialogs/taube-menu.xml"/>
 
@@ -62,16 +72,15 @@
   </controls> 
 
   <input>
-    <keyboard include="Nasal/taube-keyboard.xml"/>
+    <keyboard include="Systems/taube-keyboard.xml"/>
   </input>
 
   <nasal>
     <taube>
       <file>Aircraft/Etrich-Taube/Nasal/taube.nas</file>
-      <file>Aircraft/Etrich-Taube/Nasal/rpm.nas</file>
+      <file>Aircraft/Etrich-Taube/Nasal/cames.nas</file>
       <file>Aircraft/Etrich-Taube/Nasal/liveries.nas</file>
     </taube>
   </nasal>
 
 </PropertyList>
-
