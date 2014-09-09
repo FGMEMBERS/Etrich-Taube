@@ -1,0 +1,989 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>taube.ac</path>
+
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/Etrich-Taube/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
+    </load>
+
+    <unload>
+      livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
+    </unload>
+  </nasal>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>capot</object-name>
+    <object-name>structure</object-name>
+    <object-name>profondeur1</object-name>
+    <object-name>profondeur2</object-name>
+    <object-name>profondeur3</object-name>
+    <object-name>profondeur4</object-name>
+    <object-name>ailesbois</object-name>
+    <object-name>aileronG1</object-name>
+    <object-name>aileronG2</object-name>
+    <object-name>aileronG3</object-name>
+    <object-name>aileronD1</object-name>
+    <object-name>aileronD2</object-name>
+    <object-name>aileronD3</object-name>
+    <object-name>touravant</object-name>
+    <object-name>tourarriere</object-name>
+    <object-name>axes</object-name>
+    <object-name>essieu</object-name>
+    <object-name>pneuG</object-name>
+    <object-name>roueG</object-name>
+    <object-name>pneuD</object-name>
+    <object-name>roueD</object-name>
+    <object-name>helice1</object-name>
+    <object-name>helice2</object-name>
+    <object-name>moteur</object-name>
+    <object-name>came1</object-name>
+    <object-name>came2</object-name>
+    <object-name>came3</object-name>
+    <object-name>came4</object-name>
+    <object-name>radiateur</object-name>
+    <object-name>huile</object-name>
+    <object-name>reservoir</object-name>
+    <object-name>tuyaux</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>ailestrs</object-name>
+    <object-name>aileronGtrs1</object-name>
+    <object-name>aileronGtrs2</object-name>
+    <object-name>aileronGtrs3</object-name>
+    <object-name>aileronDtrs1</object-name>
+    <object-name>aileronDtrs2</object-name>
+    <object-name>aileronDtrs3</object-name>
+    <object-name>tailtrs</object-name>
+    <object-name>directiontrs</object-name>
+    <object-name>profondeurtrs1</object-name>
+    <object-name>profondeurtrs2</object-name>
+    <object-name>profondeurtrs3</object-name>
+    <object-name>profondeurtrs4</object-name>
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+    <object-name>cables</object-name>
+    <object-name>cablesprofLR</object-name>
+    <object-name>cablesprofH</object-name>
+    <object-name>cablesprofB</object-name>
+    <object-name>cablesaileronGD</object-name>
+    <object-name>cablesaileronGH</object-name>
+    <object-name>cablesaileronGB</object-name>
+    <object-name>cablesaileronDH</object-name>
+    <object-name>cablesaileronDB</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>capot</object-name>
+    <object-name>structure</object-name>
+    <object-name>profondeur1</object-name>
+    <object-name>profondeur2</object-name>
+    <object-name>profondeur3</object-name>
+    <object-name>profondeur4</object-name>
+    <object-name>ailesbois</object-name>
+    <object-name>aileronG1</object-name>
+    <object-name>aileronG2</object-name>
+    <object-name>aileronG3</object-name>
+    <object-name>aileronD1</object-name>
+    <object-name>aileronD2</object-name>
+    <object-name>aileronD3</object-name>
+    <object-name>touravant</object-name>
+    <object-name>tourarriere</object-name>
+    <object-name>axes</object-name>
+    <object-name>essieu</object-name>
+    <object-name>pneuG</object-name>
+    <object-name>roueG</object-name>
+    <object-name>pneuD</object-name>
+    <object-name>roueD</object-name>
+    <object-name>helice1</object-name>
+    <object-name>helice2</object-name>
+    <object-name>moteur</object-name>
+    <object-name>came1</object-name>
+    <object-name>came2</object-name>
+    <object-name>came3</object-name>
+    <object-name>came4</object-name>
+    <object-name>radiateur</object-name>
+    <object-name>huile</object-name>
+    <object-name>reservoir</object-name>
+    <object-name>tuyaux</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>ailestrs</object-name>
+    <object-name>aileronGtrs1</object-name>
+    <object-name>aileronGtrs2</object-name>
+    <object-name>aileronGtrs3</object-name>
+    <object-name>aileronDtrs1</object-name>
+    <object-name>aileronDtrs2</object-name>
+    <object-name>aileronDtrs3</object-name>
+    <object-name>tailtrs</object-name>
+    <object-name>directiontrs</object-name>
+    <object-name>profondeurtrs1</object-name>
+    <object-name>profondeurtrs2</object-name>
+    <object-name>profondeurtrs3</object-name>
+    <object-name>profondeurtrs4</object-name>
+
+    <property-base>sim/model/livery-t</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture-t.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>capot</object-name>
+    <object-name>essieu</object-name>
+    <object-name>radiateur</object-name>
+    <object-name>moteur</object-name>
+    <object-name>came1</object-name>
+    <object-name>came2</object-name>
+    <object-name>came3</object-name>
+    <object-name>came4</object-name>
+    <object-name>huile</object-name>
+    <object-name>reservoir</object-name>
+    <object-name>tuyaux</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+  </effect>
+  
+  <!-- Une ombre pour OSG -->
+  <model>
+    <path>Aircraft/Etrich-Taube/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.113 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Interieur -->
+  <model>
+    <path>Aircraft/Etrich-Taube/Models/Interior/interior.xml</path>
+  </model>
+
+  <!-- Cranking effects -->
+  <model>
+    <path>Aircraft/Etrich-Taube/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.141 </x-m>
+      <y-m>  0.293 </y-m>
+      <z-m>  0.627 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Etrich-Taube/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -4.861 </x-m>
+      <y-m>  0.293 </y-m>
+      <z-m>  0.627 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Etrich-Taube/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -4.751 </x-m>
+      <y-m>  0.293 </y-m>
+      <z-m>  0.627 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Etrich-Taube/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -4.471 </x-m>
+      <y-m>  0.293 </y-m>
+      <z-m>  0.627 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- L'hélice --> 
+  <animation>
+    <name>Helice</name>
+    <object-name>helice1</object-name>
+    <object-name>helice2</object-name>
+  </animation>
+
+  <animation>
+    <name>HeliceComplete</name>
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+    <object-name>Helice</object-name>
+  </animation>
+
+  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <animation>
+    <type>select</type>
+    <object-name>propdisc</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1100</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblur</object-name>
+    <condition>
+    <and>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>400.000</value>
+      </greater-than>
+      <less-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1100.001</value>
+      </less-than>
+    </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Helice</object-name>
+    <condition>
+      <less-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1100</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>HeliceComplete</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
+    <property>engines/engine[0]/rpm</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m> -5.432 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.128 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>came1</object-name>
+    <property>engines/engine[0]/cames</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep>  0.0 </dep></entry>
+      <entry><ind>  0 </ind><dep>  7.5 </dep></entry>
+      <entry><ind>  1 </ind><dep> 15.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -4.513 </x-m>
+      <y-m>  0.052 </y-m>
+      <z-m>  0.688 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>came2</object-name>
+    <property>engines/engine[0]/cames</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  0 </ind><dep>  -7.5 </dep></entry>
+      <entry><ind>  1 </ind><dep> -15.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -4.708 </x-m>
+      <y-m>  0.052 </y-m>
+      <z-m>  0.688 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>came3</object-name>
+    <property>engines/engine[0]/cames</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep>  0.0 </dep></entry>
+      <entry><ind>  0 </ind><dep>  7.5 </dep></entry>
+      <entry><ind>  1 </ind><dep> 15.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -4.903 </x-m>
+      <y-m>  0.052 </y-m>
+      <z-m>  0.688 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>came4</object-name>
+    <property>engines/engine[0]/cames</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  0 </ind><dep>  -7.5 </dep></entry>
+      <entry><ind>  1 </ind><dep> -15.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -5.098 </x-m>
+      <y-m>  0.052 </y-m>
+      <z-m>  0.688 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Animations des ailerons -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cablesaileronG</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 5 </factor>
+    <center>
+      <x-m> -3.460 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.878 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablesaileronD</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 5 </factor>
+    <center>
+      <x-m> -3.460 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.878 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>scale</type>
+    <object-name>cablesaileronGH</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep> 0.96 </dep></entry>
+      <entry><ind>  0 </ind><dep> 1.00 </dep></entry>
+      <entry><ind>  1 </ind><dep> 1.02 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -3.460 </x-m>
+      <y-m> -4.785 </y-m>
+      <z-m>  1.654 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablesaileronGH</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 4.5 </factor>
+    <center>
+      <x-m> -3.460 </x-m>
+      <y-m> -4.785 </y-m>
+      <z-m>  1.654 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>scale</type>
+    <object-name>cablesaileronGB</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep> 1.02 </dep></entry>
+      <entry><ind>  0 </ind><dep> 1.00 </dep></entry>
+      <entry><ind>  1 </ind><dep> 0.96 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -3.46000 </x-m>
+      <y-m> -4.88300 </y-m>
+      <z-m>  0.02853 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablesaileronGB</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 4.5 </factor>
+    <center>
+      <x-m> -3.46000 </x-m>
+      <y-m> -4.88300 </y-m>
+      <z-m>  0.02853 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>scale</type>
+    <object-name>cablesaileronDH</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep> 0.96 </dep></entry>
+      <entry><ind>  0 </ind><dep> 1.00 </dep></entry>
+      <entry><ind>  1 </ind><dep> 1.02 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -3.460 </x-m>
+      <y-m>  4.785 </y-m>
+      <z-m>  1.654 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablesaileronDH</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 4.5 </factor>
+    <center>
+      <x-m> -3.460 </x-m>
+      <y-m>  4.785 </y-m>
+      <z-m>  1.654 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>scale</type>
+    <object-name>cablesaileronDB</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep> 1.02 </dep></entry>
+      <entry><ind>  0 </ind><dep> 1.00 </dep></entry>
+      <entry><ind>  1 </ind><dep> 0.96 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -3.46000 </x-m>
+      <y-m>  4.88300 </y-m>
+      <z-m>  0.02853 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablesaileronDB</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 4.5 </factor>
+    <center>
+      <x-m> -3.46000 </x-m>
+      <y-m>  4.88300 </y-m>
+      <z-m>  0.02853 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>AileronGaucheComplet</name>
+    <object-name>aileronG1</object-name>
+    <object-name>aileronG2</object-name>
+    <object-name>aileronG3</object-name>
+    <object-name>aileronGtrs1</object-name>
+    <object-name>aileronGtrs2</object-name>
+    <object-name>aileronGtrs3</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AileronGaucheComplet</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 2 </factor>
+    <axis>
+      <x1-m> -2.680 </x1-m>
+      <y1-m> -6.164 </y1-m>
+      <z1-m>  0.858  </z1-m>
+      <x2-m> -1.358 </x2-m>
+      <y2-m> -4.274 </y2-m>
+      <z2-m>  0.854 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>SousAileronGauche1</name>
+    <object-name>aileronG2</object-name>
+    <object-name>aileronG3</object-name>
+    <object-name>aileronGtrs2</object-name>
+    <object-name>aileronGtrs3</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>SousAileronGauche1</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 3 </factor>
+    <axis>
+      <x1-m> -2.333 </x1-m>
+      <y1-m> -6.360 </y1-m>
+      <z1-m>  0.899 </z1-m>
+      <x2-m> -1.127 </x2-m>
+      <y2-m> -4.637 </y2-m>
+      <z2-m>  0.982 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>SousAileronGauche2</name>
+    <object-name>aileronG3</object-name>
+    <object-name>aileronGtrs3</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>SousAileronGauche2</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 4 </factor>
+    <axis>
+      <x1-m> -2.003 </x1-m>
+      <y1-m> -6.545 </y1-m>
+      <z1-m>  0.944 </z1-m>
+      <x2-m> -0.901 </x2-m>
+      <y2-m> -4.969 </y2-m>
+      <z2-m>  1.088 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>AileronCompletDroite</name>
+    <object-name>aileronD1</object-name>
+    <object-name>aileronD2</object-name>
+    <object-name>aileronD3</object-name>
+    <object-name>aileronDtrs1</object-name>
+    <object-name>aileronDtrs2</object-name>
+    <object-name>aileronDtrs3</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AileronCompletDroite</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 2 </factor>
+    <axis>
+      <x1-m> -1.358 </x1-m>
+      <y1-m>  4.274 </y1-m>
+      <z1-m>  0.854 </z1-m>
+      <x2-m> -2.680 </x2-m>
+      <y2-m>  6.164 </y2-m>
+      <z2-m>  0.858 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>SousAileronDroit1</name>
+    <object-name>aileronD2</object-name>
+    <object-name>aileronD3</object-name>
+    <object-name>aileronDtrs2</object-name>
+    <object-name>aileronDtrs3</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>SousAileronDroit1</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 3 </factor>
+    <axis>
+      <x1-m> -1.127 </x1-m>
+      <y1-m>  4.637 </y1-m>
+      <z1-m>  0.982 </z1-m>
+      <x2-m> -2.333 </x2-m>
+      <y2-m>  6.360 </y2-m>
+      <z2-m>  0.899 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>SousAileronDroit2</name>
+    <object-name>aileronD3</object-name>
+    <object-name>aileronDtrs3</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>SousAileronDroit2</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 4 </factor>
+    <axis>
+      <x1-m> -0.901 </x1-m>
+      <y1-m>  4.969 </y1-m>
+      <z1-m>  1.088 </z1-m>
+      <x2-m> -2.003 </x2-m>
+      <y2-m>  6.545 </y2-m>
+      <z2-m>  0.944 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Gouverne de direction -->
+  <animation>
+    <type>rotate</type>
+    <object-name>directiontrs</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 15 </factor>
+    <center>
+      <x-m> 2.786 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.273 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y> 
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <!-- Gouverne de profondeur -->
+  <animation>
+    <name>ProndeurComplete</name>
+    <object-name>profondeur1</object-name>
+    <object-name>profondeur2</object-name>
+    <object-name>profondeur3</object-name>
+    <object-name>profondeur4</object-name>
+    <object-name>profondeurtrs1</object-name>
+    <object-name>profondeurtrs2</object-name>
+    <object-name>profondeurtrs3</object-name>
+    <object-name>profondeurtrs4</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ProndeurComplete</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 2.5 </factor>
+    <center>
+      <x-m> 3.102 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.273 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>SousProndeur1</name>
+    <object-name>profondeur2</object-name>
+    <object-name>profondeur3</object-name>
+    <object-name>profondeur4</object-name>
+    <object-name>profondeurtrs2</object-name>
+    <object-name>profondeurtrs3</object-name>
+    <object-name>profondeurtrs4</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>SousProndeur1</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 3.5 </factor>
+    <center>
+      <x-m> 3.654 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.273 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>SousProndeur2</name>
+    <object-name>profondeur3</object-name>
+    <object-name>profondeur4</object-name>
+    <object-name>profondeurtrs3</object-name>
+    <object-name>profondeurtrs4</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>SousProndeur2</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 4.5 </factor>
+    <center>
+      <x-m> 4.181 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.273 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>SousProndeur3</name>
+    <object-name>profondeur4</object-name>
+    <object-name>profondeurtrs4</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>SousProndeur3</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 5.5 </factor>
+    <center>
+      <x-m> 4.663 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.273 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablesprofLR</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 8 </factor>
+    <center>
+      <x-m> 2.762 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.275 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>scale</type>
+    <object-name>cablesprofH</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep> 0.94 </dep></entry>
+      <entry><ind>  0 </ind><dep> 1.00 </dep></entry>
+      <entry><ind>  1 </ind><dep> 1.05 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 2.762 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 1.365 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablesprofH</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 8 </factor>
+    <center>
+      <x-m> 2.762 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 1.365 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>scale</type>
+    <object-name>cablesprofB</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep> 1.05 </dep></entry>
+      <entry><ind>  0 </ind><dep> 1.00 </dep></entry>
+      <entry><ind>  1 </ind><dep> 0.94 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  2.762 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.745 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablesprofB</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 8 </factor>
+    <center>
+      <x-m>  2.762 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.745 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Rotation des roues lors du roulage -->
+  <animation>
+    <name>RoueGauche</name>
+    <object-name>pneuG</object-name>
+    <object-name>roueG</object-name>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>RoueGauche</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -3.603 </x-m>
+      <y-m> -1.017 </y-m>
+      <z-m> -1.304 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>RoueDroite</name>
+    <object-name>pneuD</object-name>
+    <object-name>roueD</object-name>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>RoueDroite</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -3.603 </x-m>
+      <y-m>  1.017 </y-m>
+      <z-m> -1.304 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

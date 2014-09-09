@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim>
+    
+      <model>
+        <livery>
+          <name type="string">Austria</name>
+          <texture>Liveries/1024x1024/austria.png</texture>
+          <specular>
+            <red>   0.3 </red>
+            <green> 0.3 </green>
+            <blue>  0.3 </blue>
+          </specular>
+        </livery>
+        <livery-t>
+          <name type="string">Austria</name>
+          <texture>Liveries/1024x1024/austria-t.png</texture>
+          <specular>
+            <red>   0.3 </red>
+            <green> 0.3 </green>
+            <blue>  0.3 </blue>
+          </specular>
+        </livery-t>
+      </model>
+      
+  </sim>
+
+</PropertyList>
