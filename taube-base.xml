@@ -63,17 +63,9 @@
 
   </sim>
 
-  <controls>
-    <engines>
-      <engine>
-        <mixture archive="y"> 0.65 </mixture>
-      </engine>
-    </engines>
-  </controls> 
-
-  <input>
-    <keyboard include="Systems/taube-keyboard.xml"/>
-  </input>
+  <input include="Systems/taube-keyboard.xml"/>
+  
+  <controls include="Systems/controls.xml"/>
 
   <nasal>
     <taube>

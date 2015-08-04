@@ -9,7 +9,7 @@ data 6
 manche
 texture "yoke.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 209
 -0.016736 0.783242 -0.003323
 -0.016736 0.782273 -0.006517
@@ -1373,7 +1373,7 @@ data 6
 pedals
 texture "yoke.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 81
 0 -0.009574 -0.015482
 0.013408 -0.009574 -0.007741
@@ -1963,7 +1963,7 @@ data 10
 piedmanche
 texture "yoke.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 385
 0.043675 -0.030607 0.02753
 0.043675 -0.030607 0.036401
@@ -4973,7 +4973,7 @@ data 6
 volant
 texture "yoke.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 962
 -0.016736 0.783569 -0.000241
 -0.016736 0.783241 0.003081

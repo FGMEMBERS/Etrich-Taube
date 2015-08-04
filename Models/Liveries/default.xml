@@ -14,15 +14,6 @@
           <blue>  0.3 </blue>
         </specular>
       </livery>
-      <livery-t>
-        <name type="string">Default</name>
-        <texture>texture-t.png</texture>
-        <specular>
-          <red>   0.3 </red>
-          <green> 0.3 </green>
-          <blue>  0.3 </blue>
-        </specular>
-      </livery-t>
     </model>
       
   </sim>
