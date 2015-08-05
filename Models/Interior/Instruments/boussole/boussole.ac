@@ -10,7 +10,7 @@ data 4
 face
 texture "boussole.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 33
 0.000323 0 0
 0.000323 0.005834 -0.02933
@@ -246,7 +246,7 @@ data 4
 fond
 texture "boussole.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 289
 -0.002006 -0 -0.036085
 -0.002006 -0.00704 -0.035391
@@ -2530,7 +2530,7 @@ data 6
 needle
 texture "boussole.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 16
 0.002633 0 -0.002665
 0.001148 0 0.003378
@@ -2644,7 +2644,7 @@ name "vitre"
 loc 0.001627 -0.000002 -0.000001
 data 5
 vitre
-crease 30.000001
+crease 180.000005
 numvert 33
 0.001126 0.00002 0.000013
 0.001126 0.026724 -0.018374

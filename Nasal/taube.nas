@@ -12,4 +12,3 @@ controls.adjMixture = func {
     }
     else print ("mixture can't be adjusted for now");
 }
-

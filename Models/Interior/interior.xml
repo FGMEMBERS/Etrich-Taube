@@ -11,7 +11,18 @@
     <!-- Objets transparents -->
     <object-name>inttail</object-name>
   </animation>
-
+<!--
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <equals>
+        <property>sim/rendering/rembrandt/enabled</property>
+        <value>true</value>
+      </equals>
+    </condition>
+    <object-name>inttail</object-name>
+  </effect>
+-->
   <!-- Yoke -->
   <model>
     <path>Aircraft/Etrich-Taube/Models/Interior/Instruments/yoke/yoke.xml</path>

@@ -10,7 +10,7 @@ data 4
 face
 texture "clock.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 33
 0.000815 0 0
 0.000815 0.005834 -0.02933
@@ -246,7 +246,7 @@ data 4
 fond
 texture "clock.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 289
 -0.005062 -0 -0.036085
 -0.005062 -0.00704 -0.035391
@@ -2530,7 +2530,7 @@ data 6
 heures
 texture "clock.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 229
 -0.001793 -0.000011 -0.001726
 -0.001793 -0.000348 -0.001693
@@ -4120,7 +4120,7 @@ data 7
 minutes
 texture "clock.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 229
 -0 -0 -0.002157
 -0 -0.000421 -0.002116
@@ -5710,7 +5710,7 @@ data 8
 secondes
 texture "clock.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 229
 -0.001845 -0.015903 -0.000683
 -0.001845 -0.016036 -0.00067
@@ -7298,7 +7298,7 @@ name "vitre"
 loc 0.00614 0.00001 -0.000001
 data 5
 vitre
-crease 30.000001
+crease 180.000005
 numvert 33
 0.002842 0.00002 0.000013
 0.002842 0.026724 -0.018374

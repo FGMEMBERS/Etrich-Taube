@@ -13,9 +13,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
 
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -30,6 +30,17 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>capot</object-name>
+    <object-name>essieu</object-name>
+    <object-name>radiateur</object-name>
+    <object-name>moteur</object-name>
+    <object-name>came1</object-name>
+    <object-name>came2</object-name>
+    <object-name>came3</object-name>
+    <object-name>came4</object-name>
+    <object-name>huile</object-name>
+    <object-name>reservoir</object-name>
+    <object-name>tuyaux</object-name>
+    
     <object-name>structure</object-name>
     <object-name>profondeur1</object-name>
     <object-name>profondeur2</object-name>
@@ -45,7 +56,6 @@
     <object-name>touravant</object-name>
     <object-name>tourarriere</object-name>
     <object-name>axes</object-name>
-    <object-name>essieu</object-name>
     <object-name>pneuG</object-name>
     <object-name>roueG</object-name>
     <object-name>pneuD</object-name>
@@ -53,15 +63,16 @@
     <object-name>helice1</object-name>
     <object-name>helice2</object-name>
     <object-name>moteur</object-name>
-    <object-name>came1</object-name>
-    <object-name>came2</object-name>
-    <object-name>came3</object-name>
-    <object-name>came4</object-name>
-    <object-name>radiateur</object-name>
-    <object-name>huile</object-name>
-    <object-name>reservoir</object-name>
-    <object-name>tuyaux</object-name>
-
+    <object-name>cables</object-name>
+    <object-name>cablesprofLR</object-name>
+    <object-name>cablesprofH</object-name>
+    <object-name>cablesprofB</object-name>
+    <object-name>cablesaileronGD</object-name>
+    <object-name>cablesaileronGH</object-name>
+    <object-name>cablesaileronGB</object-name>
+    <object-name>cablesaileronDH</object-name>
+    <object-name>cablesaileronDB</object-name>
+    
     <!-- Objets transparents -->
     <object-name>ailestrs</object-name>
     <object-name>aileronGtrs1</object-name>
@@ -78,20 +89,22 @@
     <object-name>profondeurtrs4</object-name>
     <object-name>propdisc</object-name>
     <object-name>propblur</object-name>
-    <object-name>cables</object-name>
-    <object-name>cablesprofLR</object-name>
-    <object-name>cablesprofH</object-name>
-    <object-name>cablesprofB</object-name>
-    <object-name>cablesaileronGD</object-name>
-    <object-name>cablesaileronGH</object-name>
-    <object-name>cablesaileronGB</object-name>
-    <object-name>cablesaileronDH</object-name>
-    <object-name>cablesaileronDB</object-name>
   </animation>
 
   <animation>
     <type>material</type>
     <object-name>capot</object-name>
+    <object-name>essieu</object-name>
+    <object-name>radiateur</object-name>
+    <object-name>moteur</object-name>
+    <object-name>came1</object-name>
+    <object-name>came2</object-name>
+    <object-name>came3</object-name>
+    <object-name>came4</object-name>
+    <object-name>huile</object-name>
+    <object-name>reservoir</object-name>
+    <object-name>tuyaux</object-name>
+    
     <object-name>structure</object-name>
     <object-name>profondeur1</object-name>
     <object-name>profondeur2</object-name>
@@ -107,7 +120,6 @@
     <object-name>touravant</object-name>
     <object-name>tourarriere</object-name>
     <object-name>axes</object-name>
-    <object-name>essieu</object-name>
     <object-name>pneuG</object-name>
     <object-name>roueG</object-name>
     <object-name>pneuD</object-name>
@@ -115,27 +127,16 @@
     <object-name>helice1</object-name>
     <object-name>helice2</object-name>
     <object-name>moteur</object-name>
-    <object-name>came1</object-name>
-    <object-name>came2</object-name>
-    <object-name>came3</object-name>
-    <object-name>came4</object-name>
-    <object-name>radiateur</object-name>
-    <object-name>huile</object-name>
-    <object-name>reservoir</object-name>
-    <object-name>tuyaux</object-name>
-
-    <property-base>sim/model/livery</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>texture.png</texture>
-    <specular>
-      <red-prop>specular/red</red-prop>
-      <green-prop>specular/green</green-prop>
-      <blue-prop>specular/blue</blue-prop>
-    </specular>
-  </animation>
-
-  <animation>
-    <type>material</type>
+    <object-name>cables</object-name>
+    <object-name>cablesprofLR</object-name>
+    <object-name>cablesprofH</object-name>
+    <object-name>cablesprofB</object-name>
+    <object-name>cablesaileronGD</object-name>
+    <object-name>cablesaileronGH</object-name>
+    <object-name>cablesaileronGB</object-name>
+    <object-name>cablesaileronDH</object-name>
+    <object-name>cablesaileronDB</object-name>
+    
     <object-name>ailestrs</object-name>
     <object-name>aileronGtrs1</object-name>
     <object-name>aileronGtrs2</object-name>
@@ -149,10 +150,10 @@
     <object-name>profondeurtrs2</object-name>
     <object-name>profondeurtrs3</object-name>
     <object-name>profondeurtrs4</object-name>
-
-    <property-base>sim/model/livery-t</property-base>
+    
+    <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
-    <texture>texture-t.png</texture>
+    <texture>texture.png</texture>
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
@@ -180,7 +181,30 @@
     <object-name>propdisc</object-name>
     <object-name>propblur</object-name>
   </effect>
-  
+  <!--
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <equals>
+        <property>sim/rendering/rembrandt/enabled</property>
+        <value>true</value>
+      </equals>
+    </condition>
+    <object-name>ailestrs</object-name>
+    <object-name>aileronGtrs1</object-name>
+    <object-name>aileronGtrs2</object-name>
+    <object-name>aileronGtrs3</object-name>
+    <object-name>aileronDtrs1</object-name>
+    <object-name>aileronDtrs2</object-name>
+    <object-name>aileronDtrs3</object-name>
+    <object-name>tailtrs</object-name>
+    <object-name>directiontrs</object-name>
+    <object-name>profondeurtrs1</object-name>
+    <object-name>profondeurtrs2</object-name>
+    <object-name>profondeurtrs3</object-name>
+    <object-name>profondeurtrs4</object-name>
+  </effect>
+  -->
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/Etrich-Taube/Models/shadow.xml</path>
